@@ -10,22 +10,7 @@ async def salomlash(xabar: types.Message):
 
 @dp.message_handler(commands=['help'])
 async def yordam(xabar: types.Message):
-    await xabar.answer("/start - buyrug'ini bosish orqali botni qayta ishga tushurish mumkin !")
-@dp.message_handler(commands=['video'])
-async def yordam(xabar: types.Message):
-    url = "https://youtube-media-downloader.p.rapidapi.com/v2/video/details"
-
-    # querystring = {"videoId": "G33j5Qi4rE8"}
-
-    headers = {
-        "X-RapidAPI-Key": "eb59523282msh7afe13a2ccc53fdp181e6djsn7c4d816b692c",
-        "X-RapidAPI-Host": "youtube-media-downloader.p.rapidapi.com"
-    }
-
-    response = requests.request("GET", url, headers=headers)
-    g=response.json()["videos"]["items"][0]["url"]
-    await xabar.answer_video(g)
-
+    await xabar.answer("/start - buyrug'ini bosish orqali botni qayta ishga tushurish mumkin !"
 @dp.message_handler()
 async def echo(xabar: types.Message):
     soat=await xabar.answer("⌛️")
