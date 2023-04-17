@@ -1,0 +1,12 @@
+karta=[5,4,8,0,2,0,5,7,2,6,1,5]
+toplam=[]
+for son in range(0, 12):
+    if son % 2 == 0:
+        kopaytma = karta[son] * 2
+        if kopaytma > 9:
+            toplam.append(int(str(kopaytma)[0]) + int(str(kopaytma)[1]))
+        else:
+            toplam.append(kopaytma)
+    else:
+        toplam.append(karta[son])
+print(sum(toplam)%10)
